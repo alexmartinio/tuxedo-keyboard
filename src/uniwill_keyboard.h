@@ -501,6 +501,8 @@ static int uw_kbd_bl_init(struct platform_device *dev)
 	int status = 0;
 
 	uniwill_kbd_bl_type_rgb_single_color = false
+		// XMG Core 15 2020
+		| dmi_match(DMI_BOARD_NAME, "GK5NxxO M20")
 		// New names
 		| dmi_match(DMI_BOARD_NAME, "POLARIS1501A1650TI")
 		| dmi_match(DMI_BOARD_NAME, "POLARIS1501A2060")
